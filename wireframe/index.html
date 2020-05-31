@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>National Park</title>
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link rel="stylesheet" href="index.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+    <div class="container">
+        <form>
+           <div class="main-group group">
+                <div class="search-item item item-margin-right">
+                    <div class="city-group group">
+                        <div class="city-item item">
+                            <p>City</p>
+                            <input type="text" id="city" placeholder="input city">
+                        </div>
+                        <div class="state-item item">
+                            <p>State</p>
+                            <input type="text" id="state" placeholder="input state">
+                        </div>
+                    </div>
+                    <div class='name-group'>
+                        <p>Search name</p>
+                        <input type="text" id="name" placeholder="eg. name">
+                    </div>
+                    <div class='search-category-group'>
+                        <p>Search category</p>
+                        <div class="group category-group">
+                            <div class="item item-margin-right">
+                                <input type="checkbox" id="shop-service" name="shop-service" value="4d4b7105d754a06378d81259">
+                                <label for="shop-service">Shop & Service</label><br>
+                                
+                                <input type="checkbox" id="residence" name="residence" value="4e67e38e036454776db1fb3a">
+                                <label for="residence">Residence</label><br>
+
+                                <input type="checkbox" id="food" name="food" 
+                                value="4d4b7105d754a06374d81259">
+                                <label for="food">Food</label><br>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox" id="art-entertainment" name="art-entertainment" value="4d4b7104d754a06370d81259">
+                                <label for="art-entertainment">Arts & Entertainment</label><br>
+                                <input type="checkbox" id="travel-transport" name="travel-transport" value="4d4b7105d754a06379d81259">
+                                <label for="travel-transport">Travel & Transport</label><br>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class='radius-group hidden'>
+                        <p>Search radius (Unit: m)</p>
+                        <input type="number" id="radius" placeholder="eg. 250">
+                    </div>
+                    <br>
+                </div>
+                <div class="find-item item">
+                    <input type="submit" class="submit" value="Get it">
+                    
+                </div>
+           </div>
+           
+        </form>
+    </div>
+    
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="script.js"></script> -->
+</body>
+</html>
