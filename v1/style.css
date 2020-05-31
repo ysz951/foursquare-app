@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+h1{
+  background-color: blanchedalmond;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 10px;
+}
+
+li, img {
+  max-width: 500px;
+}
+
+
+strong{
+font-weight: bold;
+}
+
+
+
+.error-message {
+  color: red;
+}
+
+.hidden {
+display: none;
+}
+
+p{
+  margin-bottom: 7px;
+}
+
+.group{
+  /* width: 100%; */
+}
+
+.main-group{
+  background-color: antiquewhite;
+  padding: 10px;
+}
+
+.search-item{
+  width: 80%;
+}
+.city-group input{
+  width: 100%;
+}
+
+.radius-group input{
+  width: 100%;
+}
+
+.radius-group p{
+  /* margin-top: 0; */
+}
+
+.name-group input{
+  width: 100%;
+}
+
+.find-item{
+  /* margin-top:10px; */
+}
+
+.city-group .item{
+  /* margin-right: 10px; */
+}
+
+
+
+@media only screen and (min-width: 450px) {
+  
+  
+  .item-margin-right{
+    margin-right: 10px;
+  }
+
+
+  .submit{
+    margin-top: 41px;
+  }
+
+  
+
+  .search-item{
+    width: 100%;
+  }
+  
+}
+
+@media only screen and (min-width: 800px) {
+  
+  .city-item{
+    margin-right:10px;
+  }
+  .state-item{
+    margin-left: 10px;
+  } 
+  
+}
+
+
+
+
+
+
+
