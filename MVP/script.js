@@ -6,12 +6,6 @@ const foursquareVenueURL = 'https://api.foursquare.com/v2/venues/search';
 const foursquarePhotonURL = 'https://api.foursquare.com/v2/venues/';
 const googleURL = 'https://maps.googleapis.com/maps/api/streetview';
 
-// google apikey
-const key = 'AIzaSyDal57aUyQAAoSUb82ptXKbH1X4M-iYu8I';
-
-// foursquare client information
-const client_id = 'K3JLT3HH0JYERCWAZQYHLHKFMX4JFM5VQ4FXUOOLUQIRWPZ2';
-const client_secret = 'NKTAY0IR52WOKLSWDY32SR5AYVKG2RAQIEZK3NENASVTAB44';
 // foursquare version
 const v = '20200514';
 
