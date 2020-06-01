@@ -43,7 +43,7 @@ function getFour(city, state, radius, query, categoryId, limit) {
   const queryString = formatQueryParams(params)
   // build the complete url
   const url = foursquareVenueURL + '?' + queryString;
-  console.log(url);
+ 
 
   // clear error message
   $('#js-error-message').text('');
@@ -116,33 +116,38 @@ function getImage(venueId, listId){
       }
       throw new Error(response.statusText);
     })
+    // if the result image can be fetched from Foursquare
     .then(responseJson => imageRequest(responseJson.response.photos, listId))
-    
     .catch(err => {
-      $('.error-message').show();
-      $('#js-error-message').text(`Something went wrong: ${err.message}`);
+    // else, fetch the image from google
+      googleImage(listId);
     });
+}
+
+// fetch the image from Google Static Street View
+function googleImage(listId){
+  const imageSize = '400x300';
+  const params = {
+    size: imageSize,
+    location: `${STORE[listId].lat},${STORE[listId].lng}`,
+    key: key,
+  };
+  const  queryString = formatQueryParams(params);
+  const  url = googleURL + '?' + queryString;
+  $(`#num-${listId}`).append(`<img src='${url}' alt="error">`)
 }
 
 function imageRequest(photoResponse, listId){
   
   let photoItem = photoResponse.items[0]
-  // if the result image can be fetched from Foursquare
+  // if Foursqure has the image
   if (photoItem){
     const imageSrc = photoItem.prefix + `${photoItem.width}x${photoItem.height}` + photoItem.suffix;
     $(`#num-${listId}`).append(`<img src='${imageSrc}' alt="error">`)
   }
   // Else, fetch the result image from Google Static Street View 
   else{
-    const imageSize = '400x300';
-    const params = {
-      size: imageSize,
-      location: `${STORE[listId].lat},${STORE[listId].lng}`,
-      key: key,
-    };
-    const  queryString = formatQueryParams(params);
-    const  url = googleURL + '?' + queryString;
-    $(`#num-${listId}`).append(`<img src='${url}' alt="error">`)
+    googleImage(listId)
   }
   
 }
