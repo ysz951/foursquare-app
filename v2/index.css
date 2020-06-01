@@ -1,0 +1,44 @@
+
+
+.group {
+display: flex;
+flex-direction: row;
+
+}
+.city-group{
+  flex-direction: column;
+}
+
+.category-group{
+    flex-direction: column-reverse;
+}
+
+@media only screen and (min-width: 450px) {
+   
+  
+    .container{
+      display: flex;
+      justify-content: center;
+    }
+    
+    .category-group{
+        flex-direction: row;
+      }
+    
+    
+  }
+  
+  @media only screen and (min-width: 800px) {
+    .city-group{
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    .container{
+      display: flex;
+      justify-content: center;
+    }
+  
+    
+    
+  }
